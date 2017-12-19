@@ -3,9 +3,11 @@
   "description": "Une API pour les informations de l'annuaire de service-public.fr",
   "author": "Thomas Guillet <guillet.thomas@gmail.com>",
   "version": "1.0.0",
+  "main": "index.js",
   "dependencies": {
     "bluebird": "^3.5.1",
-    "express": "~4.15.0"
+    "express": "~4.15.0",
+    "xml2js": "^0.4.19"
   },
   "repository": {
     "type": "git",

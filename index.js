@@ -73,14 +73,16 @@ importData('data')
         .then((d) => res.json(d))
     })
 
-    app.use('/communes/:commune_id', communeRouter)
 
-    app.get('/organismes/:organisme_id', getOrganisme)
-
-    app.use((error, req, res, next) => {
+    let mainRouter = express.Router()
+    mainRouter.use('/communes/:commune_id', communeRouter)
+    mainRouter.get('/organismes/:organisme_id', getOrganisme)
+    mainRouter.use((error, req, res, next) => {
         console.log(error)
         res.json({ message: 'error', error: error.message })
     })
+
+    app.use('/v2', mainRouter)
 
     app.listen(port, () => {
         console.log('API listening on port %d', port)

@@ -14,20 +14,7 @@ https://github.com/creationix/nvm#install-script
 
 
 #### Script de mise à jour des données
-```bash
-FILENAME=all_latest.tar.bz2
-LATEST_TIMESTAMP=$(stat -c %y tmp/${FILENAME})
-wget --directory-prefix=tmp --timestamping http://lecomarquage.service-public.fr/donnees_locales_v2/$FILENAME
-
-if [[ "$LATEST_TIMESTAMP" == `stat -c %y tmp/${FILENAME}` ]]
-then
-    echo NOTHING TO DO
-else
-    echo EXTRACT!
-    mkdir --parents data
-    tar xf tmp/all_latest.tar.bz2 -C data --strip-components=1
-fi
-```
+`import.sh` est un exemple de script de mise à jour des données.
 
 #### Systemd service, pour `/lib/systemd/system/annuaire-api.service` :
 ```

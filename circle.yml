@@ -1,0 +1,10 @@
+machine:
+  node:
+    version: 6
+
+test:
+  pre:
+    - ./import.sh
+
+  override:
+    - test -f tmp/archives/all_latest.tar.bz2

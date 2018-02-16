@@ -1,7 +1,8 @@
 var express = require('express')
 const { prepareDataset } = require('./main')
+const enrich = require('./enrich')
 
-const dataset = prepareDataset()
+const dataset = enrich('data', prepareDataset())
 const port = process.env.PORT || 12345
 let app = express()
 

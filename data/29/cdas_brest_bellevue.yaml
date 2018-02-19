@@ -4,10 +4,11 @@ pivotLocal: cdas
 id: cdas_brest_bellevue
 adresses:
   - lignes:
-    - 13 place Napoléon III
     - Le Grand Pavois
+    - 13 place Napoléon III
     codePostal: 29200
     commune: Brest
+    type: physique
 url: https://www.finistere.fr/Les-services-pres-de-chez-vous/Les-Centres-departementaux-d-action-sociale-CDAS-du-Finistere/CDAS-de-Brest-Bellevue
 téléphone: 02 98 47 08 09
 fax: 02 98 47 78 40
